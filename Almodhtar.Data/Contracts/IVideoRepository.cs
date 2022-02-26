@@ -1,0 +1,14 @@
+﻿using Almodhtar.ViewModels.Video;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Almodhtar.Data.Contracts
+{
+    public interface IVideoRepository
+    {
+        string CheckVideoFileName(string fileName);
+        Task<List<VideoViewModel>> GetPaginateVideosAsync(int offset, int limit, string orderBy, string searchText);
+    }
+}
